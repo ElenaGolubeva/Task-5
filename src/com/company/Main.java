@@ -69,7 +69,7 @@ public class Main {
 
         // write your code here
     }
-    public static String encryrt(String a){
+    public static String encryrt(String a){     //кодирование слов из слов в числа
         int[] result= new int[a.length()];
         char[] chars = new char[a.length()];
 
@@ -90,7 +90,7 @@ public class Main {
 
 
 
-    public static String decrypt(int[] a){
+    public static String decrypt(int[] a){      //кодироване слов из чисел в слова
         String result ="";
         char x = 0;
         
@@ -109,7 +109,7 @@ public class Main {
 
 
 
-    public static boolean canComplete(String a, String b){
+    public static boolean canComplete(String a, String b){      //набор букв идет по порядку в целом слове
         int x=0;
             for (int i=0; i<b.length();i++){
                 if(b.charAt(i)==a.charAt(x)){
@@ -124,7 +124,7 @@ public class Main {
 
 
 
-    public static int sumDigProd(int [] a){
+    public static int sumDigProd(int [] a){     //сумма чисел и произведение цифр полученного числа
         int rez=0;
         for (int i=0; i<a.length;i++){
             rez=rez+a[i];
@@ -147,7 +147,7 @@ public class Main {
 
 
 
-    public static boolean canMove(String a, String b1, String b2){
+    public static boolean canMove(String a, String b1, String b2){      // ход фигур в шахматах
         char [] b1Mas = new char[b1.length()];
 
         char [] b2Mas = new char[b2.length()];
@@ -185,7 +185,7 @@ public class Main {
 
 
 
-    public static ArrayList<String> sameVoweGroup(String []x){
+    public static ArrayList<String> sameVoweGroup(String []x){      //слова с одним набором гласных букв, что и в первом слове
         ArrayList<String> result = new ArrayList<String>();
         boolean a=false;
         boolean e=false;
@@ -240,7 +240,7 @@ public class Main {
 
 
 
-    public static boolean validateCard(Long x){
+    public static boolean validateCard(Long x){     //проверка номера на соответствие номеру карты
         long posl=0;
         long x1=0;
         int len = (int) Math.ceil(Math.log10(x));
@@ -288,7 +288,7 @@ public class Main {
 
 
 
-    public static String numToEng(int a){
+    public static String numToEng(int a){       //перевод числа в словесную интерпретацию на английском
         String rez ="";
         String [] mas1 =new String[]{"one","two","three", "four", "five", "six", "seven", "eight", "nine", "ten"};
         String [] mas2 = new String[]{"twenty", "thirty", "forty","fifty", "sixty", "seventy", "eighty", "ninety"};
@@ -326,7 +326,7 @@ public class Main {
 
 
 
-    public static String getSha256Hash(String base) {
+    public static String getSha256Hash(String base) {       //хэш-код
         try{
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(base.getBytes("UTF-8"));
@@ -347,11 +347,11 @@ public class Main {
 
 
 
-    public static boolean equals(String str1, String str2) {
+    public static boolean equals(String str1, String str2) {        //переопределение метода equals
         return str1 == null ? str2 == null : str1.equals(str2);
     }
 
-    public static String correctTitle(String a){
+    public static String correctTitle(String a){        //формирование предложения в правильном регистре
         String result = "";
         result = a.toLowerCase();
         String[] massStr = result.split(" ");
@@ -374,7 +374,7 @@ public class Main {
 
 
 
-    public static String hexLattice(int a){
+    public static String hexLattice(int a){     //центрированное шестиугольное число
         String rez = "";
         String x = "*";
         int k=1;
